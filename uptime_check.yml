@@ -1,0 +1,6 @@
+---
+- name: check uptime
+  hosts: all
+  tasks:
+    - name: check uptime on target hosts
+      command: uptime
