@@ -4,3 +4,7 @@
   tasks:
     - name: check uptime on target hosts
       command: uptime
+      register: output
+    - name: print the output
+      debug:
+       msg: "{{ output }}"
