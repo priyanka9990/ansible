@@ -13,7 +13,7 @@
     - name: restart the service
       service:
         name: "{{ package }}"
-        state: restart
+        state: restarted
         
         
         
