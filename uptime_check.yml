@@ -14,8 +14,8 @@
       copy: 
          src: /root/file.txt
          dest: /var/www/html/index.html
-     - name: restart the service
-       service:
+    - name: restart the service
+      service:
         name: "{{ package }}"
         state: restart
         
