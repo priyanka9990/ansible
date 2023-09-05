@@ -1,0 +1,13 @@
+---
+- name: task for adding users
+  hosts: all
+  become: true
+  tasks: 
+   - name: add the user
+     user:
+       name: priyanka
+       comment: creating a user from AWX
+       home: /home/priyanka
+       shell: /bin/bash
+       uid: 9999
+
