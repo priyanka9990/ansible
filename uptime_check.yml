@@ -5,13 +5,13 @@
     - name: update the repo with centralized repo
       yum: 
        name: "*"
-       state: installed
+       state: latest
     - name: install apache2 package
       yum:
        name: "{{ package }}"
        state: present
     - name: change the file info
-       command: " echo " Hello $HOSTNAME" > /var/www/html/index.html
+       command: 'echo  "Hello" $HOSTNAME" > /var/www/html/index.html'
         
         
         
