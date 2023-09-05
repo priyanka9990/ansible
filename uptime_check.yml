@@ -10,10 +10,6 @@
       yum:
        name: "{{ package }}"
        state: present
-    - name: change the file info
-      copy: 
-         src: /root/file.txt
-         dest: /var/www/html/index.html
     - name: restart the service
       service:
         name: "{{ package }}"
