@@ -11,7 +11,7 @@
        name: "{{ package }}"
        state: present
     - name: change the file info
-       command: 'echo  "Hello" $HOSTNAME > /var/www/html/index.html'
+       command: 'echo  "Hello $HOSTNAME" > /var/www/html/index.html'
         
         
         
