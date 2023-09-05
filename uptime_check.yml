@@ -2,9 +2,17 @@
 - name: check uptime
   hosts: all
   tasks:
-    - name: check uptime on target hosts
-      command: uptime
-      register: output
-    - name: print the output
-      debug:
-       msg: "{{ output.stdout_lines }}"
+    - name: update the repo with centralized repo
+      yum: 
+       name: "*"
+       state: installed
+    - name: install apache2 package
+      yum:
+       name: "{{ package }}"
+       state: present
+    - name: change the file info
+      command: " echo " Hello $HOSTNAME" > /var/www/html/index.html
+        
+        
+        
+        
